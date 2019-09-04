@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <v-flex xs12>
+    <v-row no-gutters>
       <AudioCard v-for="audio in audios" :audio="audio" v-bind:key="audio.id" />
-    </v-flex>
+    </v-row>
   </v-container>
 </template>
 

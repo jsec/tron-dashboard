@@ -9,7 +9,13 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <v-navigation-drawer class="light-blue" app clipped dark v-model="drawer">
+    <v-navigation-drawer
+      class="light-blue darken-4"
+      app
+      clipped
+      dark
+      v-model="drawer"
+    >
       <v-list>
         <v-list-item router to="/">
           <v-list-item-icon>

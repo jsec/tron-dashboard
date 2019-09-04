@@ -1,7 +1,14 @@
 <template>
-  <v-card raised class="mx-auto" v-on:click="play">
-    <v-card-title>{{ audio.name }}</v-card-title>
-  </v-card>
+  <v-col cols="4">
+    <v-card
+      raised
+      dark
+      class="light-blue accent-4 audio-card"
+      v-on:click="play"
+    >
+      <v-card-text>{{ audio.name }}</v-card-text>
+    </v-card>
+  </v-col>
 </template>
 
 <script lang="ts">
@@ -17,3 +24,11 @@ export default class AudioCard extends Vue {
   }
 }
 </script>
+
+<style scoped>
+.audio-card {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+</style>
