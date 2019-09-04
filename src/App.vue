@@ -9,15 +9,9 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <v-navigation-drawer
-      class="light-blue darken-2"
-      app
-      clipped
-      dark
-      v-model="drawer"
-    >
+    <v-navigation-drawer class="light-blue" app clipped dark v-model="drawer">
       <v-list>
-        <v-list-item link>
+        <v-list-item router to="/">
           <v-list-item-icon>
             <v-icon>mdi-home</v-icon>
           </v-list-item-icon>
@@ -25,7 +19,7 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item router to="/sounds">
           <v-list-item-icon>
             <v-icon>mdi-volume-high</v-icon>
           </v-list-item-icon>
@@ -37,7 +31,7 @@
     </v-navigation-drawer>
 
     <v-content>
-      <CardContainer />
+      <router-view />
     </v-content>
   </v-app>
 </template>

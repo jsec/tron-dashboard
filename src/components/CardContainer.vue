@@ -10,12 +10,7 @@
 import {Component, Vue} from 'vue-property-decorator';
 import {AxiosResponse} from 'axios';
 import AudioCard from './AudioCard.vue';
-
-interface Audio {
-  id: string;
-  name: string;
-  filename: string;
-}
+import {Audio} from '../interfaces/audio';
 
 @Component({
   components: {AudioCard},
@@ -27,7 +22,6 @@ export default class CardContainer extends Vue {
     this.$http
       .get('http://localhost:3000/audio')
       .then((response: AxiosResponse) => {
-        console.log(response.data);
         this.audios = response.data.audios;
       });
   }

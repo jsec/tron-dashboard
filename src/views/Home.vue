@@ -1,15 +1,10 @@
 <template>
-  <CardContainer />
+  <h4>Home</h4>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '../components/HelloWorld.vue';
-import CardContainer from '../components/CardContainer.vue';
+import {Component, Vue} from 'vue-property-decorator';
 
-export default Vue.extend({
-  components: {
-    CardContainer,
-  },
-});
+@Component
+export default class Home extends Vue {}
 </script>

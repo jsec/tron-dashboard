@@ -1,17 +1,12 @@
 <template>
-  <v-card class="mx-auto" v-on:click="play">
+  <v-card raised class="mx-auto" v-on:click="play">
     <v-card-title>{{ audio.name }}</v-card-title>
   </v-card>
 </template>
 
 <script lang="ts">
 import {Component, Prop, Vue} from 'vue-property-decorator';
-
-interface Audio {
-  id: string;
-  name: string;
-  filename: string;
-}
+import {Audio} from '../interfaces/audio';
 
 @Component
 export default class AudioCard extends Vue {
