@@ -37,17 +37,17 @@
     </v-navigation-drawer>
 
     <v-content>
-      <HelloWorld />
+      <CardContainer />
     </v-content>
   </v-app>
 </template>
 
 <script lang="ts">
 import {Component, Vue} from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import CardContainer from './components/CardContainer.vue';
 
 @Component({
-  components: {HelloWorld},
+  components: {CardContainer},
 })
 export default class App extends Vue {
   public name: string = 'App';
